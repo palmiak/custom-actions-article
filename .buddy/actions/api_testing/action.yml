@@ -14,5 +14,6 @@ execute_commands:
   - apt-get update && apt-get install -y curl jq
   - api=`curl -s $url`
   - result=`jq $jq_command <<< $api`
+  - export result
 docker_image_name: "ubuntu"
 docker_image_tag: "latest"
