@@ -1,0 +1,10 @@
+name: "A11y_Testing"
+inputs:
+  url:
+    name: "URL ou want to test"
+    required: true
+execute_commands:
+  - npm install -g pa11y-ci
+  - pa11y $url --browser=firefox --exit
+docker_image_name: "buildkite/puppeteer"
+docker_image_tag: "latest"
