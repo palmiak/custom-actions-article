@@ -1,0 +1,12 @@
+name: "API Parser"
+inputs:
+  url:
+    name: "URL ou want to test"
+    required: true
+  jq_command:
+    name: "JQ parse command"
+    required: true
+execute_commands:
+  - curl -s $url | jq $jq_command
+docker_image_name: "ubuntu"
+docker_image_tag: "latest"
