@@ -6,9 +6,13 @@ inputs:
   jq_command:
     name: "JQ parse command"
     required: true
+output:
+  variables:
+    result:
+      info: "Result of JQ on API"
 execute_commands:
   - apt-get update && apt-get install -y curl jq
-  - SW=`curl -s $url`
-  - `jq $jq_command <<< $SW`
+  - API=`curl -s $url`
+  - RESULT=`jq $jq_command <<< $API`
 docker_image_name: "ubuntu"
 docker_image_tag: "latest"
