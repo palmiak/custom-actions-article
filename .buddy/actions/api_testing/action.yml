@@ -9,6 +9,6 @@ inputs:
 execute_commands:
   - apt-get update && apt-get install -y curl jq
   - SW=`curl -s $url`
-  - jq $jq_command <<< "$SW"
+  - `jq $jq_command <<< $SW`
 docker_image_name: "ubuntu"
 docker_image_tag: "latest"
