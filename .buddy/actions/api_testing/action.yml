@@ -12,7 +12,7 @@ output:
       info: "Result of JQ on API"
 execute_commands:
   - apt-get update && apt-get install -y curl jq
-  - API=`curl -s $url`
-  - RESULT=`jq $jq_command <<< $API`
+  - api=`curl -s $url`
+  - result=`jq $jq_command <<< $api`
 docker_image_name: "ubuntu"
 docker_image_tag: "latest"
