@@ -1,1 +1,1 @@
-# custom-actions-article
+# Buddy Custom actions
