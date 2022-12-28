@@ -1,0 +1,12 @@
+name: "Axe_Testing"
+inputs:
+  url:
+    name: "URL ou want to test"
+    required: true
+execute_commands:
+  - apt-get update && apt-get install -y firefox-esr nodejs npm
+  - npm install geckodriver --allow-root --unsafe-perm=true -g
+  - npm install @axe-core/cli --unsafe-perm=true --allow-root -g
+  - axe $url --browser=firefox --exit
+docker_image_name: "debian"
+docker_image_tag: "latest"
