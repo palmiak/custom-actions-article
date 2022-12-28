@@ -8,7 +8,7 @@ inputs:
     required: true
 execute_commands:
   - apt-get update && apt-get install -y curl jq
-  - SW=curl -s $url
+  - "SW=curl -s $url"
   - echo $SW
 docker_image_name: "ubuntu"
 docker_image_tag: "latest"
