@@ -1,4 +1,4 @@
-name: "no_deploy_on_friday"
+name: "no_deploys_on_friday"
 execute_commands:
   - if [[ $(date +%u) == 5 ]]; then echo 'Do not deploy on Firday.' && exit 1; fi;
 docker_image_name: "Ubuntu"
