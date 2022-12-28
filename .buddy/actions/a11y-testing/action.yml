@@ -5,6 +5,6 @@ inputs:
     required: true
 execute_commands:
   - npm install -g pa11y-ci
-  - pa11y $url --browser=firefox --exit
+  - pa11y-ci -c config.json $url
 docker_image_name: "buildkite/puppeteer"
 docker_image_tag: "latest"
