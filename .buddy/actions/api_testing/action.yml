@@ -9,7 +9,7 @@ inputs:
 output:
   variables:
     result:
-      info: "Result of JQ on API"
+      example: "Variable with the results of the JQ on API"
 execute_commands:
   - apt-get update && apt-get install -y curl jq
   - api=`curl -s $url`
