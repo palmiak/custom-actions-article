@@ -1,7 +1,7 @@
 name: "API_Parser"
 inputs:
   url:
-    name: "URL ou want to test"
+    name: "URL you want to test"
     required: true
   jq_command:
     name: "JQ parse command"
